@@ -1,4 +1,4 @@
-package com.sprint1Implementation.step_definitions;
+package com.sprint1Implementation.StepDefs;
 
 import io.cucumber.java.en.Given;
 
