@@ -8,13 +8,14 @@ import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 public class Hooks {
     @Before("@ui")
     public void setUp() {
         // we put a logic that should apply to every scenario
-        Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
         //added line to open URL -mk
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));

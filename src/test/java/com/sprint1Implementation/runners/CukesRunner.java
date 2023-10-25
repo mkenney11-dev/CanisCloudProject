@@ -13,9 +13,9 @@ import org.junit.runner.RunWith;
                     "json:target/cucumber.json"
             },
             features = "src/test/resources/features",
-            glue ="com/sprint1Implementation/step_definitions",
-            dryRun = true,
-            tags = "",
+            glue ="com/sprint1Implementation/StepDefs",
+            dryRun = false,
+            tags = "@login",
             publish = true //generating a report with public link
     )
 
