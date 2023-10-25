@@ -1,5 +1,6 @@
 package com.sprint1Implementation.StepDefs;
 
+import com.sprint1Implementation.utilities.ConfigurationReader;
 import com.sprint1Implementation.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -15,6 +16,8 @@ public class Hooks {
         // we put a logic that should apply to every scenario
         Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
+        //added line to open URL -mk
+        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
     }
 
     @After("@ui")
