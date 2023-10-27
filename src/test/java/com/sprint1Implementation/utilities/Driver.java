@@ -54,12 +54,6 @@ public class Driver {
                     driverPool.get().manage().window().maximize();
                     driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
                     break;
-                case "safari":
-                    //WebDriverManager.safaridriver().setup();
-                    driverPool.set(new SafariDriver());
-                    driverPool.get().manage().window().maximize();
-                    driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-                    break;
             }
 
         }
