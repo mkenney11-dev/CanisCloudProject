@@ -3,17 +3,15 @@ package com.sprint1Implementation.StepDefs;
 import com.sprint1Implementation.pages.LoginPage;
 import com.sprint1Implementation.utilities.ConfigurationReader;
 import io.cucumber.java.en.Given;
-import org.checkerframework.checker.units.qual.C;
 
-import javax.naming.CompositeName;
-
-public class login {
+public class Login {
 
 
     @Given("the user is on the login page")
     public void the_user_is_on_the_login_page() {
         System.out.println("Launch login page through Before method (hooks)");
     }
+
     @Given("the user logged in as {string}")
     public void the_user_logged_in_as(String userType) {
         String username = null;
@@ -35,5 +33,4 @@ public class login {
         LoginPage loginPage = new LoginPage();
         loginPage.login(username, password);
     }
-
 }
